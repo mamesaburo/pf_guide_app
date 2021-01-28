@@ -8,6 +8,9 @@
     <% @stations.each do |station| %>
       <div class="item-list">
       <%= link_to station_path(station.id), method: :get do %>
+      <% if station.image.attached? %>
+      <%= image_tag station.image.variant(resize:'300x275') %>
+      <% end %>
         <h3 class='item-name'>
           <%= station.name %>
         </h3>
