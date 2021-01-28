@@ -1,0 +1,16 @@
+<div class="station-show">
+  <div class="station-box">
+    <div class="station-name">
+      <p><%#= @station.name %>駅
+      </p>
+    </div>
+    <div class="station-form">
+  <% @platform.each do |platform| %>
+    <%= render partial: "stations", locals: { stations: stations } %>
+  <% end %>
+    </div>
+    <div class="wrap">
+      <a href="stations#index" class="button">Click me!</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="station-show">
+  <div class="station-box">
+    <div class="station-name">
+      <p><%= @station.name %>駅
+      </p>
+    </div>
+    <div class="station-form">
+    <%= form_with url: station_path(@station), local: true, method: :get do |f| %>
+      <div>
+        <div><%= f.label :platform_id, "プラットフォーム番号" %></div>
+        <div><%= f.search_field :platform_id %></div>
+      </div>
+      <%= f.submit class: 'search-q-btn' %>
+    <% end %>
+    <%if false %>
+    <%= search_form_for @q, url: root_path do |f| %>
+      <div>
+        <div><%= f.label :user_name_cont, "ユーザー名" %></div>
+        <div><%= f.search_field :user_name_cont %></div>
+      </div>
+      <%= f.submit class: 'search-q-btn' %>
+      <% end %>
+    <% end %>
+    </div>
+    <% if @platform %>
+    <%= @platform.elevator.name %>
+    <% end %>
+    <div class="wrap">
+      <a href="stations#index" class="button">Click me!</a>
+    </div>
+  </div>
+</div>

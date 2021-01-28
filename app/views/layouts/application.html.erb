@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PfGuideApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-app-title">Platform Guide</div>
+    </header>
+    <%= yield %>
+    <footer>
+      Copyright©︎2020 Platform Guide.com, All Rights Reserved.
+    </footer>
+  </body>
+</html>

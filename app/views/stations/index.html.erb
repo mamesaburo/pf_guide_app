@@ -1,0 +1,19 @@
+<div class="main">
+  <div class="content">
+    <div class="content-image">
+      <%= image_tag "1883714_s.jpg", class: "content-image-1" %>
+      <%= image_tag "photo0000-5301.jpg", class: "content-image-2" %>
+    </div>
+    <div class="item-info">
+    <% @stations.each do |station| %>
+      <div class="item-list">
+      <%= link_to station_path(station.id), method: :get do %>
+        <h3 class='item-name'>
+          <%= station.name %>
+        </h3>
+      <% end %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
